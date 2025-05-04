@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Vigésimo oitavo exemplo</h1>
+    <h2>break & continue</h2>
+    <!-- o break interrompe o loop e o continue pula para a próxima iteração -->
+
+    <script>
+      let qntsVezesJogados = 0;
+      let qntsVezesSomaPar = 0;
+
+      while (true) {
+        let dado1 = Math.floor(Math.random() * 6) + 1;
+        let dado2 = Math.floor(Math.random() * 6) + 1;
+        document.write(
+          dado1 +
+            " " +
+            dado2 +
+            " " +
+            qntsVezesJogados +
+            " " +
+            qntsVezesSomaPar +
+            "<br>"
+        );
+
+        if (dado1 === dado2) {
+          continue;
+        }
+
+        qntsVezesJogados++;
+
+        if ((dado1 + dado2) % 2 === 0) {
+          qntsVezesSomaPar++;
+        }
+        if (qntsVezesSomaPar >= 10) {
+          break;
+        }
+      }
+
+      document.write(
+        "O jogo acabou, você jogou " +
+          qntsVezesJogados +
+          " vezes e a soma dos dados foi par " +
+          qntsVezesSomaPar +
+          " vezes"
+      );
+      document.write("<br>Fim do programa");
+    </script>
+  </body>
+</html>
