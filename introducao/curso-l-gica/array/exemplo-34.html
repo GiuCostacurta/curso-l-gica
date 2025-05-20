@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Trigésimo quarto exemplo</h1>
+    <h2>array duplicado</h2>
+
+    <script>
+      let numeros = [4, 8, 1, 0, 4, 23, 98, 9, 100, 7];
+      let numeros2 = [];
+
+        for (let i = 0; i < numeros.length; i++) {
+            let numero = numeros[i] * 2;
+
+            numeros2.push(numero); //metodo push empurra um novo valor no final do array
+        }
+
+        document.write("Array original: " + numeros + "<br>");
+        document.write("Array duplicado: " + numeros2 + "<br>");
+    </script>
+  </body>
+</html>
