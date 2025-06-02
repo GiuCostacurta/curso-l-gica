@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM </title>
+</head>
+
+<body>
+  <h1 id="titulo">um título qualquer</h1>
+  <p id="paragrafo">Este é apenas um parágrafo contendo um <i> texto itálico </i> 
+    qualquer</p>
+
+  <hr>
+
+  <input type="text" id="user" value="valor peeenchido">
+
+  <hr>
+  <h2> Lista de tarefas</h2>
+  <ol id="listaTarefas">
+    <li>itam 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+  </ol>
+
+  <script>
+    document.getElementById("titulo").innerHTML = "Título alterado via DOM";
+
+    const lista = document.getElementById("listaTarefas");
+    let novaTarefa = "item adicionado via DOM";
+
+    lista.innerHTML += "<li>teste</li>"
+  </script>
+
+</body>
+
+</html>
