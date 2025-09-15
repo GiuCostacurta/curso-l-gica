@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Vigésimo segundo exemplo</h1>
+    <h2>Loops</h2>
+
+    <script>
+      let num = parseFloat(prompt("Digite um número:"));
+
+      if (!isNaN(num)) {
+        for (let i = 0; i <= 1000; i++) {
+          document.write(num + " x " + i + ": " + num * i + "<br>");
+        }
+      } else {
+        alert("digite apenas números");
+      }
+
+      document.write("fim do programa");
+
+      //o loop for é usado quando eu sei quantas vezes eu quero repetir
+    </script>
+  </body>
+</html>

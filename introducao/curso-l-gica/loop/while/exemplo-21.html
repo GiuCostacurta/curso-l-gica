@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Vigésimo primeiro exemplo</h1>
+    <h2>Loops</h2>
+
+    <script>
+      let num = parseFloat(prompt("Digite um número:"));
+
+      if (!isNaN(num)) {
+        let contador = 0;
+
+        //enquanto o contador for menor que 1000
+        while (contador <= 1000) {
+          document.write(
+            num + " x " + contador + ": " + num * contador + "<br>"
+          );
+          contador++;
+        }
+        document.write("Fim do programa");
+      } else {
+        alert("digite apenas números")
+      }
+
+      // document.write() não é mais usado comulmente, ele apenas usou para meios didáticos
+      //um loop sempre precisa ter uma consdição de saída, se não tiver, ele vai entrar em loop infinito
+    </script>
+  </body>
+</html>

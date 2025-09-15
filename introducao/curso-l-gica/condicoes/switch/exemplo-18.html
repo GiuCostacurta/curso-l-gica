@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Décimo oitavo exemplo</h1>
+    <h2>condições</h2>
+
+    <script>
+      let num = prompt("digite um numero entre 1 e 7");
+
+      switch (num) {
+        case "1":
+          alert("Domingo");
+          break;
+        case "2":
+          alert("Segunda-feira");
+          break;
+        case "3":
+          alert("Terça-feira");
+          break;
+        case "4":
+          alert("Quarta-feira");
+          break;
+        case "5":
+          alert("Quinta-feira");
+          break;
+        case "6":
+          alert("Sexta-feira");
+          break;
+        case "7":
+          alert("Sabado");
+          break;
+        default:
+          alert("digite apenas numeros entre 1 e 7");
+      }
+
+      //sempre que quiser que o programe pare apos o case escolhido deve se colocar o break
+      //se não colocar o break o programa continua executando os outros cases
+      //switch sempre vai comparar igualdade, valor e tipo
+    </script>
+  </body>
+</html>

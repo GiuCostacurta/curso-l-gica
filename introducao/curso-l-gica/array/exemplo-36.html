@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Trigésimo sexto exemplo</h1>
+    <h2>arrays</h2>
+
+    <script>
+      const numeros = [2, undefined, 31, 0, "9", 12, "qualquer texto", 98, false, [], null];
+
+        let soma = 0;
+
+        for (let i = 0; i < numeros.length; i++) {
+            let n = numeros[i];
+            
+            if(typeof n === "number"){
+                //soma somente os numeros
+                soma = soma + n;
+            }
+            
+        }
+
+        document.write("Array original: " + numeros + "<br>");
+        document.write("A soma de todos os numeros é: " + soma + "<br>");
+    </script>
+  </body>
+</html>

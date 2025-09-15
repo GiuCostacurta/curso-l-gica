@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> conta bancária</title>
+</head>
+
+<body>
+    <h1>conta bancária</h1>
+    <p>criar uma classe ContaBancaria que tenha uma propriedade privada para o saldo.</p>
+    <p>utilizar getters e setters para acessar e atualizar o saldo. o saldo só pode ser atualizado através de depósitos
+        e
+        saques, e não deve permitir que o saldo se torne negativo. </p>
+    <p>implementar métodos para depósito (depositar(valor)) e saque (sacar(valor)), onde o saque só é permitido se
+        houver
+        saldo suficiente. </p>
+
+    <script>
+        class ContaBancaria {
+            #saldo // Propriedade privada para o saldo
+
+            constructor(saldoInicial) {
+                this.#saldo = saldoInicial;
+            }
+            // Getter para acessar o saldo
+            get saldo() {
+                return this.#saldo;
+            }
+            // Setter para atualizar o saldo 
+            set saldo(valor) {
+
+            }
+            // Método para depositar valor
+            depositar(valor) {
+                if (valor > 0) {
+                    this.#saldo += valor; // Atualiza o saldo
+                    document.write(`Depósito de R$${valor} realizado. Saldo atual: R$${this.#saldo}`);
+                }
+            }
+            // Método para sacar valor
+            sacar(valor) {
+                if (valor > 0 && valor <= this.#saldo) {
+                    this.#saldo -= valor; // Atualiza o saldo
+                    document.write(`Saque de R$${valor} realizado. Saldo atual: R$${this.#saldo}`);
+                } else {
+                    document.write(`Saque de R$${valor} não realizado. Saldo insuficiente para saque.`);
+                }
+
+
+            }
+        }
+
+        const minhaConta = new ContaBancaria(100); // Cria uma conta com saldo inicial de 100
+
+        document.write(`Saldo inicial: R$${minhaConta.saldo}`); // Exibe o saldo inicial
+        document.write('<br>');
+        minhaConta.sacar(50); // saca 50
+        document.write('<br>');
+        minhaConta.depositar(200); // deposita 200
+        document.write('<br>');
+        minhaConta.sacar(300); // Tenta sacar 300, o que deve falhar devido ao saldo insuficiente
+        document.write('<br>');
+        minhaConta.sacar(250); // saca 250, o saldo total
+        document.write('<br>');
+        document.write(`Saldo final: R$${minhaConta.saldo}`); // Exibe o saldo final
+        document.write('<br>');
+
+        minhaConta.depositar(500); // Deposita 500
+        document.write(`Saldo após depósito: R$${minhaConta.saldo}`); // Exibe o saldo após o depósito
+    </script>
+</body>
+
+</html>
